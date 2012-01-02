@@ -1,0 +1,169 @@
+% !TEX encoding = UTF-8 Unicode
+%based on the guide at http://www.cv-templates.info/2009/03/professional-cv-latex/
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{paralist}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Adobe Garamond Pro]{Adobe Garamond Pro}
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1pt}{1pt} %spacing between sections in think
+%Tweak a bit the top margin
+\addtolength{\voffset}{-1.3cm} %can leverage this one to resize header
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+  {\Huge Nuno \textsc{Valente}
+}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & Rua Leitão de Barros nº 2 R/C Dto - 2725-676 Algueirão\\
+    \textsc{Phone:}     & +351 96 6172918\\
+    \textsc{email:}     & \href{mailto:nuno.valente@gmail.com}{nuno.valente@gmail.com} \\
+\end{tabular}
+
+%Section: Summary
+\section{Summary}
+I'm a Software Engineer always interested in the success of every project that i'm involved. 
+I love a good challenge and making part of awesome ideas that can make a difference on their market.
+My expectations are to find that ideas or to be able to execute some of mine with tight and motivated teams.
+Right now, my main focus lies on software stack's that encompass CEP technologies, but i'm very much interested in Machine Learning, Stock Markets, BioTechnologies and all fields or markets
+that spark my inspiration.
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{rp{11cm}}
+  \textsc{2009 - present} & \emph{Software and CEP Engineer} at \textbf{PT Comunicações}, Lisboa\\ 
+  & \begin{compactitem} 
+     \item Developed and engineered several components for the fifth generation of a monitoring platform for IT infrastructures and Business Processes. The main components where i was involved
+     where a DSL Parser to describe IT Infrastructures and several set's of rules for a ESP/CEP engine. I have also continued to develop components for the previous version of the aforementioned
+     monitoring platform.
+     \end{compactitem}\vspace{-1em} \\
+\multicolumn{2}{c}{} \\
+  \textsc{2008 - 2009} & \emph{Software and CEP Engineer} at \textbf{PT Comunicações}, Lisboa\\ 
+  & \begin{compactitem} 
+     \item Developed and engineered several components for the fourth generation of a monitoring platform for IT infrastructures and Business Processes.
+     The bulk of my work was to re-factor and maintain Windows monitoring agents, develop an ETL infrastructure to handle agent events on the server side, develop set's of rules for a ESP/CEP 
+     engine,  to correlate agent and businesses events from several sources.
+     \end{compactitem}\vspace{-1em} \\
+  & \begin{compactitem} 
+     \item Planed and executed load and stress tests on some company product public websites.
+     \end{compactitem}\vspace{-1em} \\
+\multicolumn{2}{c}{} \\
+%should refer here that i also was one of the core developers for a CEP solution that was giving the first steps on the BI/CEP marriage 
+  \textsc{2007 - 2008} & Intern developer at \textbf{PT Comunicações}, Lisboa\\ 
+   & \begin{compactitem}
+   \item Developed core components and monitoring agents for the fourth generation of an "in house" monitoring solution, using my knowledge acquired while working on my final project.
+   \end{compactitem}\vspace{-1em} \\
+  & \begin{compactitem}
+   \item Finished my college final project entitled "Middleware Security, Performance Monitoring and Analysis" with final score of 18 on a scale between 0 and 20.
+   The main goals of my final project where the following: 
+   \begin{description}
+		\item[] Identify QoS, QoP and QoM indexes for the most used Middleware platforms in PT Comunicações. In that time where Microsoft Biztalk and Tibco Rendezvous;
+   \end{description}
+   \begin{description}
+		\item[] Develop midleware monitoring agents to extract relevant information that can be correlated to produce QoS, QoP and QoM indexes;
+   \end{description}
+      \begin{description}
+		\item[] Develop a set of rules in SEC (Simple Event Correlator) to produce the desired indexes;
+   \end{description}
+   \end{compactitem}\vspace{-1em} \\
+\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+2001 - 2007 & \textbf{Faculdade de Ciências e Técnologias da Universidade Nova de Lisboa}\\
+ & Major of Science (5 year major pré-Bolonha) in \textsc{Software Engineering} with the average score of 15\\
+ & ECTS weighted) on a scale between 0 and 20. \\
+\end{tabular}
+
+\section{Languages and Frameworks}
+\begin{tabular}{r|p{11cm}}
+\multicolumn{2}{c}{} \\
+	Ruby / JRuby
+	& Developed several components for an event processing stack, such as event preprocessors, input/output adapters and Esper (CEP) engine loaders. 
+	Wrote private gems with API's for company internal services.\\
+\multicolumn{2}{c}{} \\
+	Java
+	&  Wrote a Tibco monitoring agent to extract measures from Tibco Hawk. Also wrote Camel routes, processors, translators. Ad-hoc Event pre processors, CEP engine loaders, etc.\\
+\multicolumn{2}{c}{} \\
+	.Net C Sharp
+	&  Developed an agent as a Windows service that was responsible to load micro-agents to extract QoS measurements, ad-hoc logs /Eventlog samples. 
+	Also made an API available to third parties develop their own micro-agents.\\
+\end{tabular}
+
+\section{Platforms and Technologies}
+\begin{tabular}{r|p{11cm}}
+	CEP (Esper) 
+	& Engineered and wrote an Esper engine loader, adapters, peripheral components, and a distributed engine loader using ActiveMQ\\
+	& Constructed several rule set's to correlate events from the most important business processes that require near real time attention such as sales, home equipment malfunction report incidents,
+	    IVR calls, etc.\\
+\multicolumn{2}{c}{} \\ 
+	OS's 
+	&  Daily use of Linux and OSX for both personal and enterprise use (distributions: Red Hat, Debian) \\
+\multicolumn{2}{c}{} \\
+	Databases 
+	& MySQL, Oracle (in college)\\
+\multicolumn{2}{c}{} \\
+	Web 
+	& Ruby on Rails for prototyping some management web interfaces.\\
+\multicolumn{2}{c}{} \\
+	Revision Control 
+	& Daily use of Git\\
+\multicolumn{2}{c}{} \\
+	Middleware \ MQ 
+	& ActiveMQ and Camel lately\\
+	& Learned Tibco Rendezvous and Hawk while working in my final college project and intership. \\
+\multicolumn{2}{c}{} \\
+	Load Testing 
+	& QTest and OpenSTA
+\end{tabular}
+
+%Section: Certificates
+\section{Training}
+\begin{tabular}{rl}
+ 2011 & SCRUM Master  \\
+ 2008 & QTest Load Testing \\
+\end{tabular}
+
+\section{Interests and Activities}
+Physical exercise is one off my favorite hobbies and i always try to save some time on my day to do some running, lift weighting, indoor fitness classes, martial arts or play a football game.
+Besides my main interests in ESP, CEP, Machine Learning, etc, i also try to keep up with the current hot topics such as Social Web, Online Piracy legislation, Patent Wars, BioTech and so many more.
+On my commute time i love to read or listen to audiobooks and my tastes tend to fall on the Science Fiction or Technology/Engineering domains.
+
+\end{document}
