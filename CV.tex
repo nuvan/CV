@@ -9,7 +9,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[big]{layaureo} 				%better formatting of the A4 page
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
+%\usepackage{supertabular} 				%for Grades
 \usepackage{titlesec}					%custom \section
 \usepackage{paralist}
 
@@ -21,12 +21,10 @@
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[SmallCapsFont = Adobe Garamond Pro]{Adobe Garamond Pro}
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{1pt}{1pt} %spacing between sections in think
+\titlespacing{\section}{0pt}{3pt}{3pt} %spacing between sections i think
 %Tweak a bit the top margin
-\addtolength{\voffset}{-1.3cm} %can leverage this one to resize header
+\addtolength{\voffset}{-0.5cm} %can leverage this one to resize header
 
 %Italian hyphenation for the word: ''corporations''
 \hyphenation{im-pre-se}
@@ -46,7 +44,6 @@
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
 \section{Personal Data}
-
 \begin{tabular}{rl}
     \textsc{Address:}   & Rua Leitão de Barros nº 2 R/C Dto - 2725-676 Algueirão\\
     \textsc{Phone:}     & +351 96 6172918\\
@@ -55,51 +52,95 @@
 
 %Section: Summary
 \section{Summary}
-I'm a Software Engineer always interested in the success of every project that i'm involved.
-Educated on the Java ecosystem in college and further gained experience with it with day to day work but I've fallen in love with the (J)Ruby world after being introduced to Rails.
-Being a Blue Ocean enthusiast i want to be a part of awesome ideas that can cast a brand new look over the existing markets.
-My expectations are to find a company motivated with breaking away from the status-quo, where i can make a difference on their growth and where my ideas can be put in place.
-Right now, my main focus lies in software stack's that encompass CEP technologies, but  I'm always eager to learn, create and excel in any field. 
-I'm particularly interested in Machine Learning, Financial Markets, BioTech, IoT, and all fields or markets that spark my inspiration.
+I'm a Software Engineer always interested in the success of every project that I'm involved.
+Educated in the midst of the Java ecosystem while in college, I've gained experience with the language with the day-to-day work but I've also fallen in love with the (J)Ruby world while doing my internship.
+Studying at Universidade Nova has taught me proficiency in assimilating new languages, paradigms and styles, and I am confident in using them to solve specific problems and build complex systems.
+Being a Blue Ocean enthusiast I want to be a part of awesome ideas that can cast a brand new look over the existing markets.
+My expectations are to find a company motivated with breaking away from the status quo, where I can make a difference on their growth and where my ideas can be put in place and action.
+I'm very comfortable standing at the frontier that separates product and development but hopping between those two is very easy for me.
+Right now, my main focus lies in software stack's that encompass (C)ESP (Complex Event Stream Processing) technologies, but I’m always eager to learn, create and excel in any field. 
+I'm particularly interested in Machine Learning, Financial Markets, Biotech, IoT, but i'm happy with any domain that sparks my inspiration.
 
 %Section: Work Experience
 \section{Work Experience}
+%should refer here that i also was one of the core developers for a CEP solution that was giving the first steps on the BI/CEP marriage 
 \begin{tabular}{rp{11cm}}
-  \textsc{2008 - present} & \emph{Software and CEP Engineer} at \textbf{Portugal Telecom}, Lisboa\\ 
+  \textsc{2008 - present} & \textbf{Software and CEP Engineer} at \textbf{Portugal Telecom}, Lisbon\\ 
   & \begin{compactitem} 
-     \item Developed and engineered several components for the fifth generation of a monitoring platform for IT infrastructures and Business Processes. The main components where i was involved
-     where a DSL Parser to describe IT Infrastructures and several set's of rules for a ESP/CEP engine. I have also continued to develop components for the previous version of the aforementioned
-     monitoring platform.
+     \item As a member of a R\&D team, i was responsible to maintain a proactive search of open source technologies that the company could benefit from. It was expected the development of PoC projects that could evaluate the effectiveness of one or more technologies while making use of real company data. 
      \end{compactitem}\vspace{-1em} \\
   & \begin{compactitem} 
-     \item Developed and engineered several components for the fourth generation of a monitoring platform for IT infrastructures and Business Processes.
-     The bulk of my work was to write, re-factor and maintain a set of Windows monitoring agents, develop an ETL infrastructure to handle agent events and to develop set's of rules for a ESP/CEP 
-     engine,  to correlate agent and businesses events from several sources. I also lead several smaller internal projects.
+     \item For six months I undertook the Scrum Master position while working on a in-house monitoring solution.
+     \end{compactitem}\vspace{-1em} \\
+  & \begin{compactitem}
+  	%architechted? check this one 
+     \item Architected and developed several components for the forth and fifth generation of a monitoring platform for IT infrastructures and Business Processes. The major components where I was involved where: a DSL Parser to describe the most common company IT Infrastructures; a service to run a well know CEP engine and to process incoming monitoring events; the middleware to support message flow between the front-end API services and all the monitoring platform components; several set's of rules and heuristics for the CEP engine and some integration components like ETL processes and message queue integration processes.
+     \end{compactitem}\vspace{-1em} \\
+  & \begin{compactitem} 
+     \item I was responsible for implement several monitorization projects for company critical business processes. Those projects required investigative work with the application development teams and owners, proactive search for useful information in the involved company systems and applications, making a monitorization plan that included a useful set of metrics, KPI and alarms and put that plan in to action. These projects where materialized making use of the in-house developed monitorization platform and extending it, if needed.
+     \end{compactitem}\vspace{-1em} \\
+  & \begin{compactitem} 
+     \item Architected and developed several monitoring agents for Windows based systems. Those agents where installed in the servers that supported the most critical company business applications. They had the capability of extracting virtually any measurment from the system. They where also capable to monitor and extract log files or Event Log entries in real time.
      \end{compactitem}\vspace{-1em} \\
   & \begin{compactitem} 
      \item Planned and executed load and stress tests on critical product public websites.
      \end{compactitem}\vspace{-1em} \\
-\multicolumn{2}{c}{} \\
-%should refer here that i also was one of the core developers for a CEP solution that was giving the first steps on the BI/CEP marriage 
-  \textsc{2007 - 2008} & Intern developer at \textbf{Portugal Telecom}, Lisboa\\ 
+  \textsc{2007 - 2008} & \textbf{Software Engineer Intern} at \textbf{Portugal Telecom}, Lisbon\\ 
    & \begin{compactitem}
-   \item Developed core components and monitoring agents for the fourth generation of an "in house" monitoring solution, using the acquired knowledge while working on my college final project.
+   \item Architected and developed core components and monitoring agents for the fourth generation of an in-house monitoring solution, using the acquired knowledge
+   while working on my college final project.
    \end{compactitem}\vspace{-1em} \\
   & \begin{compactitem}
-   \item Finished my college final project entitled "Middleware Security, Performance Monitoring and Analysis" with final grade of 18/20.
-   The main goals of my final project where the following: 
-   \begin{description}
-		\item[] Identify QoS, QoP and QoM indexes for the most critical Middleware platforms in Portugal Telecom. At that time they were Microsoft Biztalk and Tibco Rendezvous;
-   \end{description}
-   \begin{description}
-		\item[] Develop middleware monitoring agents to extract relevant information that can be correlated to produce QoS, QoP and QoM indexes;
-   \end{description}
-      \begin{description}
-		\item[] Develop a set of rules in SEC (Simple Event Correlator) to produce the desired indexes;
-   \end{description}
+   \item I finished my college final project entitled "Middleware Security, Performance Monitoring and Analysis" with final grade of 18 on a scale between 10 and 20
    \end{compactitem}\vspace{-1em} \\
-\multicolumn{2}{c}{} \\
 
+\end{tabular}
+
+\section{Known and used technologies}
+\begin{tabular}{p{4cm}|p{9cm}}
+\multicolumn{2}{c}{} \\
+	Programming Languages
+	%making use of the java ecosystem usual suspects
+	& {\bf Java} - Making use of the common Java ecosystem development tools and frameworks such as JUnit, Spring and Maven2 i wrote several components, from monitoring agents
+	 integrated with TIBCO Hawk to Esper engine loaders.  \\
+	& {\bf JRuby\textbackslash Ruby} - Wrote ETLs, private gems with API's for internal company services, DSLs, Esper engine loaders, I/O adapters, etc.\\
+	& {\bf C\# } - Architected Developed a Windows service responsible for loading micro-agents that extract system measurements from the PT Portugal Server and Desktop park, ad-hoc logs and Eventlog samples.
+	Also made an API available to third parties to develop their own micro-agents.\\
+	& {\bf Objective C} - Used it while developing in iOS\\
+\multicolumn{2}{c}{} \\
+	Complex Event and Stream Processing Engines
+	& {\bf Esper} - Implemented several rule set's to correlate events from mission-critical business processes that require near real time attention such as sales, home equipment malfunction report incidents, IVR calls, etc.\\
+	& {\bf SEC} - Used as event correlator for minor projects. \\
+	& {\bf Drools} - Evaluated while comparing with Esper as the go to CESP engine for my team projects. \\
+\multicolumn{2}{c}{} \\
+	Databases
+	& {\bf Neo4J} - Architected and developed various PoCs to trace business events and identify system or process bottlenecks while delivering useful metrics and some system communication insights .\\ 
+	& {\bf MySQL} - Used on most projects that i took part of. \\
+	& {\bf MongoDB} - Evaluated and developed a PoC to replace MySQL on some projects. \\
+	& {\bf Oracle} - Used in a couple of projects in coledge.\\
+\multicolumn{2}{c}{} \\
+	Web Frameworks
+	& {\bf Ruby on Rails} - Used for prototyping some management and metric dasboard web interfaces. \\
+	& {\bf Sinatra and Node.js} - Implemented REST API development. \\
+\multicolumn{2}{c}{} \\
+	Middleware and Message Queueing
+	& {\bf ActiveMQ and Camel} - Used as the main message queuing system with Camel routes, processors, etc. \\
+	& {\bf RabbitMQ} - Evaluating as a replacement for ActiveMQ. \\
+	& {\bf Tibco Rendezvous and EMS} -  Used to listen event sources for (C)ESP rule sets and to integrate with Hawk monitorization.\\
+\multicolumn{2}{c}{} \\
+	Mobile Framework
+	&  {\bf iOS 4} - Developed an unreleased App for a Portuguese startup that operated in the discount card business called XPTO Card.\\
+\multicolumn{2}{c}{} \\
+	Source Control and Project Management
+	& {\bf Git} - Used for all projects in tandem with Gitorious and Redmine. \\
+	& {\bf Maven2} - Used for all Java projects.\\
+\multicolumn{2}{c}{} \\
+	Load Testing 
+	& {\bf QTest} - Because OpenSTA didn't had any maintainers the company preferred QTest since it had support from Quotium. \\
+	& {\bf OpenSTA} - Used for small load tests. \\
+\multicolumn{2}{c}{} \\ 
+	OS's 
+	&  Daily use of Linux and OSX for both personal and enterprise use (distributions: Red Hat, Debian). \\
 \end{tabular}
 
 %Section: Education
@@ -107,68 +148,22 @@ I'm particularly interested in Machine Learning, Financial Markets, BioTech, IoT
 \begin{tabular}{rl}	
 2001 - 2007 & \textbf{Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa}\\
  & Major of Science (5 year major pré-Bolonha) in \textsc{Software Engineering}. GPA of 15\\
- & on a scale between 0 and 20. \\
-\end{tabular}
-
-\section{Languages and Frameworks}
-\begin{tabular}{r|p{11cm}}
-\multicolumn{2}{c}{} \\
-	Ruby / JRuby
-	& Developed several components for an event processing stack, such as event preprocessors, input/output adapters and Esper (CEP) engine loaders. 
-	Wrote private gems with API's for internal company services.\\
-\multicolumn{2}{c}{} \\
-	Java
-	&  Wrote a Tibco monitoring agent to extract KPI's from Tibco Hawk. Wrote Camel routes, processors, translators. Implemented Ad-hoc Event pre processors,
-	CEP engine loaders, etc.\\
-\multicolumn{2}{c}{} \\
-	.Net C Sharp
-	&  Developed a Windows service responsible for loading micro-agents that extract QoS measurements, ad-hoc logs and Eventlog samples. 
-	Also made an API available to third parties to develop their own micro-agents.\\
-\multicolumn{2}{c}{} \\
-	Objective C / iOS
-	&  Developed a yet unreleased App for a restaurant discount card business.\\
-\end{tabular}
-
-\section{Platforms and Technologies}
-\begin{tabular}{r|p{11cm}}
-	CEP (Esper) 
-	& Engineered and wrote an Esper engine loader, adapters, peripheral components, and a distributed engine loader using ActiveMQ\\
-	& Designed and implemented several rule set's to correlate events from mission-critical business processes that require near real time attention such as sales, home equipment malfunction report incidents, IVR calls, etc.\\
-\multicolumn{2}{c}{} \\ 
-	OS's 
-	&  Daily use of Linux and OSX for both personal and enterprise use (distributions: Red Hat, Debian) \\
-\multicolumn{2}{c}{} \\
-	Databases 
-	& MySQL, Oracle (in college)\\
-\multicolumn{2}{c}{} \\
-	Web 
-	& Ruby on Rails for prototyping some management web interfaces. \\
-	& Node.js and Coffescript for fun \\
-\multicolumn{2}{c}{} \\
-	Revision Control 
-	& Git \\
-\multicolumn{2}{c}{} \\
-	Middleware \ Message Queueing
-	& ActiveMQ and Camel \\
-	& Tibco Rendezvous and Hawk while working in my final college project and internship. \\
-\multicolumn{2}{c}{} \\
-	Load Testing 
-	& QTest and OpenSTA \\
-\multicolumn{2}{c}{} \\
-	Mobile 
-	& iOS to design and implement a small business App. \\
+ & on a scale between 10 and 20. \\
 \end{tabular}
 
 %Section: Certificates
 \section{Training}
 \begin{tabular}{rl}
- 2011 & SCRUM Master  \\
- 2008 & QTest Load Testing \\
+\multicolumn{2}{c}{} \\
+ 2011 & \emph{Scrum Alliance} - Certificate Scrum Master  \\
+ 2008 & \emph{Quotium Technologies} - QTest \\
 \end{tabular}
 
 \section{Interests and Activities}
-Physical exercise is one of my favorite hobbies and i always try to save some time on my day to do some running, lift weighting, indoor fitness classes, martial arts or play football.
-Besides my main interests in ESP, CEP, Machine Learning, BigData, etc , i also try to keep up with the current hot topics such as Social Web, Online Piracy legislation, Patent Wars, BioTech, Stock Market trends and so many more.
-On my commute time i love to read or listen to audiobooks and my tastes tend to fall on the Science Fiction or Technology/Engineering domains.
+Physical exercise is one of my favorite hobbies and I always try to save some time on my day to do some running, lift weighting, indoor fitness classes, martial arts or play football.
+Besides my main interests in ESP, CEP, Machine Learning, BigData, etc., I also try to keep up with the current hot topics such as Social Web, Online piracy legislation, patent wars and
+so many more.
+On my commute time I love to read or listen to audiobooks and my tastes tend to fall on the Science Fiction or Technology/Engineering domains.
+While working at PT Portugal i was also actively involved in two startups. One in the discount card business and, currently, one in the spirits business.
 
 \end{document}
